@@ -58,9 +58,23 @@
 
 // ====================================================================
 
-const start = 3;
-const end = 7;
+// const start = 3;
+// const end = 7;
 
-for (let i = 3; i <= 7; i += 1) { // Change this line
-  console.log(i);
-}
+// for (let i = start; i <= end; i += 1) { // Change this line
+//   console.log(i);
+// }
+
+// ====================================================================
+
+function calculateTotal(number) {
+    let total = 0;
+    
+    for (let i = 0; i <= number; i += 1) {
+        total += i;
+      }
+    
+     return total;
+   }
+   console.log(calculateTotal(3))
+
