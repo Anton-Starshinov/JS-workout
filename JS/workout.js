@@ -147,17 +147,63 @@
 
 // ===================================================================
 
-function getCommonElements(array1, array2) {
- const elements = [];
- const get =0;
+// function getCommonElements(array1, array2) {
+//  const allArray = [];
 
- for (let i = 0; i <= array1.length; i += 1) {
-  console.log(array1[i]);
- }
- for (let i = 0; i <= array2.length; i += 1) {
+// for (let element of array1) {
+//   if (array2.includes(element)) {
+//      allArray.push(element)
+//   }
+// }
 
- }
-  get = array1.includes(array2);
-  console.log(get); 
+// return allArray;
+
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+
+// ==================================================================
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+
+//   for (let number of order) {
+//     total += number;
+//   }
+
+//   // Change code above this line
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// ==================================================================
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+
+//   for (let number of numbers) {
+   
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+  
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3))
+
+// =================================================================
+
+function getEvenNumbers(start, end) {
+  let total = [];
+
+for (let i = start; i <= end; i += 1) { 
+  if (i % 2 ===0) {
+    total.push(i)
+  }
 }
-console.log(getCommonElements([1, 2, 3], [2, 4]));
+
+   return total;
+ }
+ console.log(getEvenNumbers(2, 5))
