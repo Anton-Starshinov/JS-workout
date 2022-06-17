@@ -67,14 +67,97 @@
 
 // ====================================================================
 
-function calculateTotal(number) {
-    let total = 0;
+// function calculateTotal(number) {
+//     let total = 0;
     
-    for (let i = 0; i <= number; i += 1) {
-        total += i;
-      }
+//     for (let i = 0; i <= number; i += 1) {
+//         total += i;
+//       }
     
-     return total;
-   }
-   console.log(calculateTotal(3))
+//      return total;
+//    }
+//    console.log(calculateTotal(3))
 
+// ===================================================================
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// ====================================================================
+
+// function findLongestWord(string) {
+//   let words = string.split(' ');
+//   let result = words[0];
+
+//   for (let i = 0; i < words.length; i += 1)
+//   if (words[i].length > result.length) {
+//      result = words[i];
+//   }   
+
+
+//  return result;
+// }
+// console.log(findLongestWord("May the force be with you"));
+
+// =====================================================================
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+  
+//   for ( let i = min; i <= max; i += 1) {
+//     numbers.push(i)
+//   }
+  
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(28, 45));
+
+// ====================================================================
+
+// function filterArray(numbers, value) {
+//   const array = []; 
+
+//   for (let number of numbers) {
+//   if (number > value) {
+//     array.push(number);
+//   }
+//   }
+
+//   return array;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// ====================================================================
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+
+
+//   return console.log(fruits.includes(fruit));
+// }
+// console.log(checkFruit("plum"));
+
+// ===================================================================
+
+function getCommonElements(array1, array2) {
+ const elements = [];
+ const get =0;
+
+ for (let i = 0; i <= array1.length; i += 1) {
+  console.log(array1[i]);
+ }
+ for (let i = 0; i <= array2.length; i += 1) {
+
+ }
+  get = array1.includes(array2);
+  console.log(get); 
+}
+console.log(getCommonElements([1, 2, 3], [2, 4]));
