@@ -195,15 +195,28 @@
 
 // =================================================================
 
-function getEvenNumbers(start, end) {
-  let total = [];
+// function getEvenNumbers(start, end) {
+//   let total = [];
 
-for (let i = start; i <= end; i += 1) { 
-  if (i % 2 ===0) {
-    total.push(i)
+// for (let i = start; i <= end; i += 1) { 
+//   if (i % 2 ===0) {
+//     total.push(i)
+//   }
+// }
+
+//    return total;
+//  }
+//  console.log(getEvenNumbers(2, 5))
+
+// ===============================================================
+
+function includes(array, value) {
+  
+  for (let number of array) {
+  if (value === number) {
+    return true;
   }
-}
-
-   return total;
- }
- console.log(getEvenNumbers(2, 5))
+  }
+  return false;
+}  
+console.log(includes([1, 2, 3, 4, 5], 6));
