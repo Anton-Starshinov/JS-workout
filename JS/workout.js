@@ -210,13 +210,129 @@
 
 // ===============================================================
 
-function includes(array, value) {
+// function includes(array, value) {
   
-  for (let number of array) {
-  if (value === number) {
-    return true;
+//   for (let number of array) {
+//   if (value === number) {
+//     return true;
+//   }
+//   }
+//   return false;
+// }  
+// console.log(includes([1, 2, 3, 4, 5], 6));
+
+// ==============================================================
+
+// function countProps(object) {
+//     let propCount = 0;
+ 
+//     for (const key in object) {
+//        if (object.hasOwnProperty(key)) {
+//        propCount += 1;
+//     }
+//     }
+
+
+//     return propCount;
+//   }
+//   console.log(countProps({ name: "Mango", age: 2 }));
+
+// =============================================================
+
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+//   };
+//   const values = [];
+  
+//   const keys = Object.keys(apartment);
+//     for (const key of keys) {
+//         values.push(apartment[key])
+//     }
+// console.log(values);
+
+// =============================================================
+
+// function countProps(object) {
+    
+//     let propCount = 0;
+  
+//     const keys = Object.keys(object);
+//     for (const key of keys) {
+//         propCount = keys.length;
+//     }
+  
+//     return propCount;
+//   }
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 })); 
+
+// =============================================================
+
+// const apartment = {
+//     descr: "Spacious apartment in the city center",
+//     rating: 4,
+//     price: 2153,
+//   };
+//   // Change code below this line
+//   const keys = Object.keys(apartment);
+//   const values = Object.values(apartment);
+  
+//   console.log(keys);
+//   console.log(values);
+
+// =============================================================
+
+// function countTotalSalary(salaries) {
+//     let totalSalary = 0;
+   
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+    
+//     return totalSalary;
+//   }
+//   console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+// =============================================================
+
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+  
+//   function getProductPrice(productName) {
+    
+//     for (const product of products) {
+//         if (product.name === productName) {
+//             return product.price;
+//         } 
+//     }
+//     return null;
+//   }
+//   console.log(getProductPrice("Grip"));
+
+// ============================================================
+
+const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+  
+  function getAllPropValues(propName) {
+    const mas = [];
+
+    for (const product of products) {
+        if (propName === product.key) {
+         mas.push(product.values)
+        }
+    }
+  
   }
-  }
-  return false;
-}  
-console.log(includes([1, 2, 3, 4, 5], 6));
+  console.log(getAllPropValues("quantity"));
+  
