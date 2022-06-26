@@ -373,18 +373,227 @@
 
 // ==========================================================
 
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
-};
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
 
-const {
-  yesterday,
-  today,
-  tomorrow,
-  icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
-} = highTemperatures;
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+// } = highTemperatures;
 
-const meanTemperature = (yesterday + today + tomorrow) / 3;
-console.log(meanTemperature);
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+// ===========================================================
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+
+// ===========================================================
+
+// const defaultSettings = {
+//     theme: "light",
+//     public: true,
+//     withPassword: false,
+//     minNumberOfQuestions: 10,
+//     timePerQuestion: 60,
+//   };
+//   const overrideSettings = {
+//     public: false,
+//     withPassword: true,
+//     timePerQuestion: 30,
+//   };
+  
+//   const finalSettings = {...defaultSettings, ...overrideSettings};
+//   console.log(finalSettings);
+
+// ============================================================
+
+// function makeTask(data) {
+//     const completed = false;
+//     const category = "General";
+//     const priority = "Normal";
+
+// const finalData = { completed, category, priority, ...data };
+// return finalData;
+
+// }
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+
+// ===========================================================
+
+// function add(...args) {
+//     let total = 0;
+//     console.log(args);
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+// console.log(add(15, 27));
+
+// ===========================================================
+
+// function addOverNum(firstNumber, ...args) {
+//     let total = 0;
+//   console.log(args);
+//     for (const arg of args) {
+//       if (arg > firstNumber){
+//         total += arg;
+//       }  
+//     }
+  
+//     return total;
+//   }
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+
+// ==========================================================
+
+// function findMatches(array, ...args) {
+//     const matches = []; 
+
+//    for (const arr of array) 
+//    for (const arg of args) {
+//     if (arr === arg) {
+//         matches.push(arg);
+//     }
+//    }
+
+//     return matches;
+//   }
+//   console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+
+// ===========================================================
+
+// const bookShelf = {
+  
+//     books: ["The last kingdom", "The guardian of dreams"],
+//     updateBook(oldName, newName) {
+//       return `Updating book ${oldName} to ${newName}`;
+//     },
+//     removeBook(bookName) {
+//       return `Deleting book ${bookName}`;
+//     }
+    
+//   };
+
+// ==========================================================
+
+// const bookShelf = {
+//     books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//     updateBook(oldName, newName) {
+      
+//         const bookIndex = this.books.indexOf(oldName);
+//         console.log(bookIndex);
+//         this.books.splice(bookIndex, 1, newName);
+
+//         return this.books;
+//     },
+//   };
+// //   console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+//   console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+
+// ==========================================================
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     getPotions() {
+//      return this.potions;
+//     }
+//   };
+//   console.log(atTheOldToad.getPotions());
+
+// ==========================================================
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+   
+//     addPotion(potionName) {
+
+//      return this.potions.push(potionName);
+//     }
+    
+//   };
+//   console.log(atTheOldToad.addPotion("Invisibility"));
+
+// ==========================================================
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     removePotion(potionName) {
+//         const potionIndex = this.potions.indexOf(potionName);
+//         this.potions.splice(potionIndex, 1);
+//         return this.potions;
+//     },
+//   };
+//   console.log(atTheOldToad.removePotion("Dragon breath"));
+
+// ==========================================================
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     updatePotionName(oldName, newName) {
+
+//         const potionIndex = this.potions.indexOf(oldName);
+//         this.potions.splice(potionIndex, 1, newName);
+
+//         return this.potions;
+//     },
+//   };
+//   console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+  
+// ==========================================================
+
+const atTheOldToad = {
+    potions: [
+      { name: "Speed potion", price: 460 },
+      { name: "Dragon breath", price: 780 },
+      { name: "Stone skin", price: 520 },
+    ],
+  
+    getPotions() {
+      return this.potions;
+    },
+    addPotion(newPotion) {
+
+    for (const potion of this.potions) {
+      if (potion.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+      return this.potions.push(newPotion);
+    },
+    removePotion(potionName) {
+        
+       for (let i = 0; i < this.potions.length; i += 1) {
+    
+        if (potionName === this.potions[i].name) {
+            console.log(potionName);
+         return this.potions.splice(i, 1);
+        }
+       }; 
+    },
+    updatePotionName(oldName, newName) {
+
+        for (let i = 0; i < this.potions.length; i += 1) {
+            console.log(this.potions[i]);
+            if (oldName === this.potions[i].name){
+              return this.potions[i].name = newName;  
+            }
+        }
+    },
+   
+  };
+//   console.log(atTheOldToad.getPotions());
+//   console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+//   console.log(atTheOldToad.removePotion("Dragon breath"));
+  console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
