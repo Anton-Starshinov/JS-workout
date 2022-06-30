@@ -194,13 +194,46 @@
 
 // =========================== 13 =============================
 //                    ЧИСТЫЕ ФУНКЦИИ
-const changeEven = (numbers, value) => {
-    
-    for (let i = 0; i < numbers.length; i += 1) {
-      if (numbers[i] % 2 === 0) {
-        numbers[i] = numbers[i] + value;
-      }
-    }
-    
-  }
-console.log(changeEven([1, 2, 3, 4, 5], 10));  
+// function changeEven(numbers, value) {
+//     const even = [];
+//     numbers.forEach(element => {   
+//       if (element % 2 === 0) {
+//         even.push(element + value);
+//     } else {
+//         even.push(element);}
+//     });
+//       return even;
+//   }
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));  
+
+// ======================== 14 ===============================
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+// const planetsLengths = planets.map(planet => planet.length);
+// console.log(planetsLengths);
+
+// ======================== 16 ==============================
+
+const books = [
+    {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      rating: 8.38,
+    },
+    {
+      title: "Beside Still Waters",
+      author: "Robert Sheckley",
+      rating: 8.51,
+    },
+    {
+      title: "The Dream of a Ridiculous Man",
+      author: "Fyodor Dostoevsky",
+      rating: 7.75,
+    },
+    { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+    { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+  ];
+  const bookTitle = books.map(book => book.title)
+  console.log(bookTitle);
