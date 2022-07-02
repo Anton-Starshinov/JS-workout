@@ -508,5 +508,405 @@
 //     };
 
 // =========================== 24 ==============================
+//               ЗАДАЧА. ПОЛЬЗОВАТЕЛИ С ДРУГОМ
+
+//   const getUsersWithFriend = (users, friendName) => 
+//       users.filter(user => user.friends.includes(friendName));
+    
+//  console.log(getUsersWithFriend(users, "Briana Decker"));
+
+//  ============================ 25 =============================
+//                     ЗАДАЧА. СПИСОК ДРУЗЕЙ
+// const getFriends = (users) => {
+
+//    const allFriends = users.flatMap(user => user.friends);
+//    const uniqueFriends = allFriends.filter((friend, index, array) => array.indexOf(friend) === index);
+
+//    return uniqueFriends;
+// };
+
+// console.log(getFriends(users));
+
+// ============================ 26 =============================
+//               ЗАДАЧА. АКТИВНЫЕ ПОЛЬЗОВАТЕЛИ
+// const getActiveUsers = (users) => {
+//   const get = users.filter(({ isActive }) => isActive === true);
+
+//   return get;
+// };
+
+// console.log(getActiveUsers(users));
+
+// =========================== 27 ==============================
+//               ЗАДАЧА. НЕАКТИВНЫЕ ПОЛЬЗОВАТЕЛИ
+// const getInactiveUsers = (users) => {
+//     const get = users.filter(({ isActive }) => isActive !== true);
+
+//       return get;
+// };
+
+// console.log(getInactiveUsers(users));
+
+// ========================== 28 ==============================
+//                       МЕТОД FIND()
+// const books = [
+//     {
+//       title: 'The Last Kingdom',
+//       author: 'Bernard Cornwell',
+//       rating: 8.38,
+//     },
+//     {
+//       title: 'Beside Still Waters',
+//       author: 'Robert Sheckley',
+//       rating: 8.51,
+//     },
+//     {
+//       title: 'The Dream of a Ridiculous Man',
+//       author: 'Fyodor Dostoevsky',
+//       rating: 7.75,
+//     },
+//     { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   ];
+//   const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+//   const AUTHOR = 'Robert Sheckley';
+  
+//   const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+//   const bookByAuthor = books.find(book => book.author === AUTHOR);
+
+//   console.log(bookWithTitle);
+//   console.log(bookByAuthor);
+
+// ============================== 29 ==============================
+//                   ЗАДАЧА. ПОЛЬЗОВАТЕЛЬ С ПОЧТОЙ
+
+//   const getUserWithEmail = (users, email) => users.find(user => user.email === email);
+
+// console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+
+// =========================== 30 ============================
+//                        МЕТОД EVERY()
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const eachElementInFirstIsEven = firstArray.every(array => array % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(array => array % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(array => array % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(array => array % 2 !== 0);;
+
+// const eachElementInThirdIsEven = thirdArray.every(array => array % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(array => array % 2 !== 0);;
+
+// ============================== 31 ============================
+//             ЗАДАЧА. ВСЕ ЛИ ПОЛЬЗОВАТЕЛИ АКТИВНЫ
+
+//   const isEveryUserActive = (users) => users.every(user => user.isActive === true);
+
+//     console.log(isEveryUserActive(users));
+
+// ============================= 32 =============================
+//                          МЕТОД SOME()
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const anyElementInFirstIsEven = firstArray.some(array => array % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(array => array % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(array => array % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(array => array % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(array => array % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(array => array % 2 !== 0);
+
+// ============================ 33 ================================
+//             ЗАДАЧА. ЕСТЬ ЛИ АКТИВНЫЕ ПОЛЬЗОВАТЕЛИ
+// const isAnyUserActive = users => users.some(user => user.isActive === true);
+
+// console.log(isAnyUserActive(users));
+
+// ============================ 34 ================================
+//                       МЕТОД REDUCE()
+// const players = {
+//     mango: 1270,
+//     poly: 468,
+//     ajax: 710,
+//     kiwi: 244
+//   };
+//   const playtimes = Object.values(players); // [1270, 468, 710, 244]
+  
+//   const totalPlayTime = playtimes.reduce((acc,time) => (acc += time), 0);
+  
+//   const averagePlayTime = totalPlayTime / playtimes.length;
+
+//   console.log(averagePlayTime);
+
+// ========================= 35 ==============================
+//               МЕТОД REDUCE() И МАССИВ ОБЪЕКТОВ
+// const players = [
+//     { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//     { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//     { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//     { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+//   ];
+  
+//   const totalAveragePlaytimePerGame = players.reduce((acc,player) => {
+//   return acc += player.playtime / player.gamesPlayed;
+//   }, 0);
+
+//   console.log(totalAveragePlaytimePerGame);
+
+// ============================ 36 ============================
+//             ЗАДАЧА. ОБЩИЙ БАЛАНС ПОЛЬЗОВАТЕЛЕЙ
+
+// const calculateTotalBalance = users => users.reduce((total,user) => {
+//     return total += user.balance;
+// }, 0);
+// console.log(calculateTotalBalance(users));
+
+// ============================= 37 ==============================
+//              ЗАДАЧА. ОБЩЕЕ КОЛИЧЕСТВО ДРУЗЕЙ
+
+// const getTotalFriendCount = users => users.reduce((total,user) => {
+//     return total += user.friends.length;
+// }, 0);
+
+// console.log(getTotalFriendCount(users));
+
+// ============================= 38 ===============================
+//                          МЕТОД SORT()
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// ============================ 39 ================================
+//                СВОЙ ПОРЯДОК СОРТИРОВКИ ЧИСЕЛ
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// ============================ 40 ===============================
+//                 СВОЙ ПОРЯДОК СОРТИРОВКИ СТРОК
+// const authors = [
+//     "Tanith Lee",
+//     "Bernard Cornwell",
+//     "Robert Sheckley",
+//     "Fyodor Dostoevsky",
+//     "Howard Lovecraft",
+//   ];
+  
+//   const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+//   const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+//   console.log(authorsInAlphabetOrder);
+//   console.log(authorsInReversedOrder);
+
+// ============================= 41 ==================================
+//                      СОРТИРОВКА ОБЪЕКТОВ
+// const books = [
+//     {
+//       title: "The Last Kingdom",
+//       author: "Bernard Cornwell",
+//       rating: 8.38,
+//     },
+//     {
+//       title: "Beside Still Waters",
+//       author: "Robert Sheckley",
+//       rating: 8.51,
+//     },
+//     {
+//       title: "The Dream of a Ridiculous Man",
+//       author: "Fyodor Dostoevsky",
+//       rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+//   ];
+//   // Change code below this line
+  
+//   const sortedByAuthorName = [...books].sort((firstBook, secondBook) => 
+//   firstBook.author.localeCompare(secondBook.author));
+  
+//   const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) => 
+//   secondBook.author.localeCompare(firstBook.author));
+  
+//   const sortedByAscendingRating = [...books].sort((firstBook, secondBook) => 
+//   firstBook.rating - secondBook.rating);
+  
+//   const sortedByDescentingRating = [...books].sort((firstBook, secondBook) => 
+//   secondBook.rating - firstBook.rating);
+
+//   console.log(sortedByAuthorName);
+//   console.log(sortedByReversedAuthorName);
+//   console.log(sortedByAscendingRating);
+//   console.log(sortedByDescentingRating);
+
+// =========================== 42 ===============================
+//                ЗАДАЧА. СОРТИРОВКА ПО БАЛАНСУ
+// const sortByAscendingBalance = users => {
+//    return [...users].sort((firstUser, secondUser) => 
+//    firstUser.balance - secondUser.balance)};
+
+// console.log(sortByAscendingBalance(users));
+
+// =========================== 43 ================================
+//           ЗАДАЧА. СОРТИРОВКА ПО КОЛИЧЕСТВУ ДРУЗЕЙ
+// const sortByDescendingFriendCount = users => {
+//    return [...users].sort((firstUser, secondUser) =>
+//    secondUser.friends.length - firstUser.friends.length
+// )};
+// console.log(sortByDescendingFriendCount(users));
+
+// ========================== 44 =================================
+//                ЗАДАЧА. СОРТИРОВКА ПО ИМЕНИ
+// const sortByName = users => {
+//    return [...users].sort((firstUser, secondUser) => 
+//    firstUser.name.localeCompare(secondUser.name)
+// )};
+// console.log(sortByName);
+
+// ========================= 45 ================================
+//          ЦЕПОЧКИ МЕТОДОВ (ЧЕЙНИНГ, CHAINING)
+// const books = [
+//     {
+//       title: "The Last Kingdom",
+//       author: "Bernard Cornwell",
+//       rating: 8.38,
+//     },
+//     {
+//       title: "Beside Still Waters",
+//       author: "Robert Sheckley",
+//       rating: 8.51,
+//     },
+//     {
+//       title: "The Dream of a Ridiculous Man",
+//       author: "Fyodor Dostoevsky",
+//       rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     {
+//       title: "The Dreams in the Witch House",
+//       author: "Howard Lovecraft",
+//       rating: 8.67,
+//     },
+//   ];
+//   const MIN_BOOK_RATING = 8;
+  
+//   const names = books
+// .filter(book => book.rating > MIN_BOOK_RATING)
+// .map(book => book.author)
+// .sort();
+
+// console.log(names);
+
+// =========================== 46 ============================
+//               ЗАДАЧА. ПОЛЬЗОВАТЕЛИ И ДРУЗЬЯ
+
+// const getNamesSortedByFriendCount = users => [...users]
+// .sort((firstUser, secondUser) =>
+// firstUser.friends.length - secondUser.friends.length)
+// .map(user => user.name);
+
+// console.log(getNamesSortedByFriendCount(users));
+
+// ========================== 47 =============================
+//                  ЗАДАЧА. ИМЕНА ДРУЗЕЙ
+
+// const getSortedFriends = users => [...users]
+// .flatMap(user => user.friends)
+// .filter((user, index, array) => array.indexOf(user) === index)
+// .sort();
+
+// console.log(getSortedFriends(users));
+
+// ========================= 48 =============================
+//                  ЗАДАЧА. ОБЩИЙ БАЛАНС
+// const users = [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female"
+//     }
+//   ];
+
+// const getTotalBalanceByGender = (users, gender) => [...users]
+// .filter(user => user.gender === gender)
+// .reduce((total, user) => total += user.balance, 0);
+
+// console.log(getTotalBalanceByGender(users, 'male'));
+
 
 
