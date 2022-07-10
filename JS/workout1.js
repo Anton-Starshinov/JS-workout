@@ -330,3 +330,95 @@
 
 // ========================== 29 ============================
 //                ЗАДАЧА: ДОСТАВКА ТОВАРА
+// function getShippingCost(country) {
+//   let message;
+
+// switch(country) {
+//   case 'China':
+//   message = `Shipping to China will cost 100 credits`;
+//   break;
+
+//   case 'Chile':
+//   message = `Shipping to Chile will cost 250 credits`;
+//   break;
+
+//   case 'Australia':
+//   message = `Shipping to Australia will cost 170 credits`;
+//   break;
+
+//   case 'Jamaica':
+//   message = `Shipping to Jamaica will cost 120 credits`;
+//   break;
+
+//   default:
+//   message = "Sorry, there is no delivery to your country";
+// }
+//   return message;
+// }
+
+// =========================== 30 ============================
+//                       ДЛИНА СТРОКИ
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`;
+
+//   return message;
+// }
+
+// ============================ 31 =========================
+//                ИНДЕКСАЦИЯ ЭЛЕМЕНТОВ СТРОКИ
+// const courseTopic = "JavaScript essentials";
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// console.log(lastElement);
+
+// ========================= 32 ============================
+//                     МЕТОД SLICE()
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length);
+
+//   return substring;
+// }
+
+// ======================== 33 ===========================
+//          ЗАДАЧА: ФОРМАТИРОВАНИЕ СООБЩЕНИЯ
+// function formatMessage(message, maxLength) {
+//   let result;
+
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else if (message.length > maxLength) {
+//     result = message.slice(0, maxLength) + "...";
+//   }
+//   return result;
+// }
+
+// ======================= 34 ===========================
+//        МЕТОДЫ TOLOWERCASE() И TOUPPERCASE()
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase();
+
+//   return normalizedInput;
+// }
+
+// ======================= 35 ==========================
+//                 МЕТОД INCLUDES()
+// function checkForName(fullName, name) {
+//   const result = fullName.includes(name);
+
+//   return result;
+// }
+
+// ====================== 36 ==========================
+//            ЗАДАЧА: ПРОВЕРКА СПАМА
+// function checkForSpam(message) {
+//   let result;
+
+//   result =
+//     message.toLowerCase().includes("spam") ||
+//     message.toLowerCase().includes("sale");
+
+//   return result;
+// }
