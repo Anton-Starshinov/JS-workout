@@ -237,3 +237,96 @@
 
 // ========================= 24 ========================
 //                ЗАДАЧА: РАСЧЁТ СКИДКИ
+// function getDiscount(totalSpent) {
+//   const BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   let discount;
+
+//   if (totalSpent >= 50000) {
+//     discount = GOLD_DISCOUNT;
+//   } else if (totalSpent >= 20000 && totalSpent < 50000) {
+//     discount = SILVER_DISCOUNT;
+//   } else if (totalSpent >= 5000 && totalSpent < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else if (totalSpent < 5000) {
+//     discount = BASE_DISCOUNT;
+//   }
+//   return discount;
+// }
+// console.log(getDiscount(8250));
+
+// ========================= 25 ==========================
+//                  ТЕРНАРНЫЙ ОПЕРАТОР
+// function checkStorage(available, ordered) {
+//   let message;
+
+//   message =
+//     ordered > available
+//       ? "Not enough goods in stock!"
+//       : "The order is accepted, our manager will contact you";
+
+//   return message;
+// }
+// console.log(checkStorage(100, 50));
+
+// ========================= 26 ==========================
+//              ЗАДАЧА: ПРОВЕРКА ПАРОЛЯ
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+
+//   message =
+//     password === ADMIN_PASSWORD
+//       ? "Access is allowed"
+//       : "Access denied, wrong password!";
+
+//   return message;
+// }
+
+// ======================== 27 ===========================
+//                 ИНСТРУКЦИЯ SWITCH
+// function getSubscriptionPrice(type) {
+//   let price;
+
+//   switch (type) {
+//     case "starter":
+//       price = 0;
+//       break;
+
+//     case "professional":
+//       price = 20;
+//       break;
+
+//     case "organization":
+//       price = 50;
+//       break;
+//   }
+
+//   return price;
+// }
+
+// ========================== 28 =============================
+//          ИНСТРУКЦИЯ SWITCH C БЛОКОМ DEFAULT
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+
+//   switch (password) {
+//     case null:
+//       message = "Canceled by user!";
+//       break;
+
+//     case ADMIN_PASSWORD:
+//       message = "Welcome!";
+//       break;
+
+//     default:
+//       message = "Access denied, wrong password!";
+//   }
+//   return message;
+// }
+
+// ========================== 29 ============================
+//                ЗАДАЧА: ДОСТАВКА ТОВАРА
